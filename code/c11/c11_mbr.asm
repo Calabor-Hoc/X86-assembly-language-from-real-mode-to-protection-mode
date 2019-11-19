@@ -44,7 +44,7 @@ out 0x92,al                        ;打开A20
 cli                                ;保护模式下中断机制尚未建立，应
                                    ;禁止中断
 mov eax,cr0
-or eax,1
+or eax,0000_0001B
 mov cr0,eax                        ;设置PE位
 
 ;以下进入保护模式... ...
